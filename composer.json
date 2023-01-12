@@ -12,6 +12,7 @@
         "laravel/jetstream": "^2.14",
         "laravel/sanctum": "^3.0",
         "laravel/tinker": "^2.7",
+        "spatie/laravel-ray": "*",
         "tightenco/ziggy": "^1.0"
     },
     "require-dev": {
@@ -25,9 +26,10 @@
     },
     "autoload": {
         "psr-4": {
-            "App\\": "app/",
-            "Database\\Factories\\": "database/factories/",
-            "Database\\Seeders\\": "database/seeders/"
+            "App\\": "src/App/",
+            "Database\\": "src/Database/",
+            "Database\\Factories\\": "src/Database/Factories",
+            "Domain\\": "src/Domain/"
         }
     },
     "autoload-dev": {

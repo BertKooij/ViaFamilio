@@ -15,6 +15,9 @@ $app = new Illuminate\Foundation\Application(
     $_ENV['APP_BASE_PATH'] ?? dirname(__DIR__)
 );
 
+$app->useDatabasePath(base_path('src/Database'));
+$app->useAppPath(base_path('src/App'));
+
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
@@ -28,12 +31,12 @@ $app = new Illuminate\Foundation\Application(
 
 $app->singleton(
     Illuminate\Contracts\Http\Kernel::class,
-    App\Http\Kernel::class
+    App\Kernel::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    App\Console\Kernel::class
+    \App\Console\Kernel::class
 );
 
 $app->singleton(
