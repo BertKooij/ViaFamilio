@@ -6,6 +6,9 @@ use Laravel\Jetstream\Membership as JetstreamMembership;
 
 class Membership extends JetstreamMembership
 {
+
+    protected $table = 'tree_user';
+
     /**
      * Indicates if the IDs are auto-incrementing.
      *
